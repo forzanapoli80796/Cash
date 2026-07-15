@@ -203,6 +203,7 @@ export async function registerRoutes(
       backupTimestamps.json = new Date().toLocaleString("de-DE", {
         day: "2-digit", month: "2-digit", year: "2-digit",
         hour: "2-digit", minute: "2-digit",
+        timeZone: "Europe/Berlin",
       });
       res.setHeader("Content-Type", "application/json; charset=utf-8");
       res.setHeader(
@@ -336,6 +337,7 @@ export async function registerRoutes(
       backupTimestamps.github = now.toLocaleString("de-DE", {
         day: "2-digit", month: "2-digit", year: "2-digit",
         hour: "2-digit", minute: "2-digit",
+        timeZone: "Europe/Berlin",
       });
       res.json({ ok: true, files: files.length });
     } catch (err: any) {
